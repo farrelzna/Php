@@ -28,6 +28,10 @@
                     <label for="metode pembayaran">Metode Pembayaran</label>
                     <select id="Metode Pembayaran" name="Metode Pembayaran" required>
                         <option value="Tunai">Tunai</option>
+                        <option value="Non Tunai" >Visa</option>
+                        <option value="Non Tunai" >MasterCard</option>
+                        <option value="Non Tunai" >AmericanExpress</option>
+                        <option value="Non Tunai" >DiscoverNetworks</option>
                         <option value="Non Tunai" >Dana</option>
                         <option value="Non Tunai" >Gopay</option>
                         <option value="Non Tunai" >Bri</option>
@@ -36,11 +40,22 @@
                         <option value="Non Tunai" >Uang Slot</option>
                     </select>
                         <br><br><br>
-                    <button class="button-82-pushable" type="submit">
-                        <span class="button-82-shadow"></span>
-                        <span class="button-82-edge"></span>
-                        <span class="button-82-front text">Beli
-                    </button>  
+                    <div class="wrap2">
+                        <button onclick="Hide()" id="kirim" class="button-82-pushable" type="submit">
+                            <span class="button-82-shadow"></span>
+                            <span class="button-82-edge"></span>
+                            <span class="button-82-front text">Beli
+                        </button>  
+                        <button onclick="" id="kirim" class="button-82-pushable" type="submit">
+                            <span class="button-82-shadow"></span>
+                            <span class="button-82-edge"></span>
+                            <span class="button-82-front text">Riwayat
+                        </button>  
+                    </div>
+                    <div class="Payment" id="Payment" style="display:none;">
+                        <h3 class="h3">Metode Pembayaran :</h3>
+                        <img class="img1" id="move2" src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_SbyPP_mc_vs_dc_ae.jpg" alt="Payment"> 
+                    </div>    
                 </form>
             </div>
             <div class="section2">
@@ -150,5 +165,11 @@
                 ?>
             </div>
         </div>
+
+        <script>
+            function Hide() {
+                document.getElementById("Payment").style.display = "block";
+            }
+        </script>
     </body>
 </html>
