@@ -3,14 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Bahan Bakar</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Bahan Bakar</title>
     </head>
     <body>
         <div id="container">
             <div class="section1">
                 <div class="wrap">
-                    <img src="asset/shell.png" alt="Logo">
+                    <img class="Logo1" src="asset/shell.png" alt="Logo">
                     <h2>Powered by <span>Shell</span></h2>
                 </div> 
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
@@ -27,17 +28,15 @@
                         <br><br>
                     <label for="metode pembayaran">Metode Pembayaran</label>
                     <select id="Metode Pembayaran" name="Metode Pembayaran" required>
-                        <option value="Tunai">Tunai</option>
-                        <option value="Non Tunai" >Visa</option>
-                        <option value="Non Tunai" >MasterCard</option>
-                        <option value="Non Tunai" >AmericanExpress</option>
-                        <option value="Non Tunai" >DiscoverNetworks</option>
-                        <option value="Non Tunai" >Dana</option>
-                        <option value="Non Tunai" >Gopay</option>
-                        <option value="Non Tunai" >Bri</option>
-                        <option value="Non Tunai" >Bca</option>
-                        <option value="Non Tunai" >ShopeePay</option>
-                        <option value="Non Tunai" >Uang Slot</option>
+                        <option value="Tunai">Cash</option>
+                        <option value="Visa" >Visa</option>
+                        <option value="Mastercard" >MasterCard</option>
+                        <option value="AmericanExpress" >AmericanExpress</option>
+                        <option value="discoverNetworks" >DiscoverNetworks</option>
+                        <option value="Bri" >Bri</option>
+                        <option value="Bca" >Bca</option>
+                        <option value="Dana" >Dana</option>
+                        <option value="Gopay" >Gopay</option>
                     </select>
                         <br><br><br>
                     <div class="wrap2">
@@ -46,17 +45,47 @@
                             <span class="button-82-edge"></span>
                             <span class="button-82-front text">Beli
                         </button>  
-                        <button onclick="" id="kirim" class="button-82-pushable" type="submit">
+                        <button name="Riwayat" class="button-82-pushable" type="submit">
                             <span class="button-82-shadow"></span>
                             <span class="button-82-edge"></span>
                             <span class="button-82-front text">Riwayat
                         </button>  
                     </div>
-                    <div class="Payment" id="Payment" style="display:none;">
-                        <h3 class="h3">Metode Pembayaran :</h3>
-                        <img class="img1" id="move2" src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_SbyPP_mc_vs_dc_ae.jpg" alt="Payment"> 
-                    </div>    
-                </form>
+                </form>  
+                    <br>
+                <div class="Grup" id="Grup" style="display:none;">
+                    <h2 class="h2">Payment Method</h2>
+                        <br>
+                    <div class="Payment">
+                        <img class="Logo2" id="move" src="https://www.mastercard.co.id/content/dam/public/mastercardcom/id/id/logos/mc-logo-52.svg" alt="Payment">
+                        <img class="Logo2" id="move" src="https://www.discoverglobalnetwork.com/content/dam/discover/en_us/dgn/images/global/logos/discover-global-network-logo.svg  " alt="Payment">
+                        <img class="Logo2" id="move" src="https://www.aexp-static.com/cdaas/one/statics/axp-static-assets/1.8.0/package/dist/img/logos/dls-logo-bluebox-solid.svg" alt="Payment">
+                        <img class="Logo2" id="move" src="https://cdn.visa.com/v2/assets/images/logos/visa/blue/logo.png" alt="Payment" style="width:60px; height:30px;">
+                    </div>      
+                        <br>
+                    <h2 class="h2">Our Social Media</h2>
+                        <br>
+                    <div class="Social">
+                        <ul class="wrapper">
+                            <a class="icon facebook">
+                                <span class="span"><i class="fab fa-facebook-f"></i></span>
+                            </a>
+                            <a class="icon youtube">
+                                <span class="span"><i class="fab fa-youtube"></i></span>
+                            </a>
+                            <a class="icon tiktok">
+                                <span class="span"><i class="fab fa-tiktok"></i></span>
+                            </a>
+                            <a href="https://www.instagram.com/shell_indonesia/" class="icon instagram">
+                                <span class="span"><i class="fab fa-instagram"></i></span>
+                            </a>
+                        </ul>
+                    </div>
+                        <br>
+                    <div class="footer">
+                        <h6>Designed by Farrelzna</h6>
+                    </div>
+                </div>
             </div>
             <div class="section2">
 
@@ -132,6 +161,7 @@
                                         echo "<br><br>";
                                     echo "<h3>Link Kritik dan Saran</h3>";
                                     echo "<h6>https://www.shell.com/who-we-are/contact-us.html</h6>";
+                                    echo "<br>";
                                     echo "<button onclick='window.print()' class='button-82-pushable'>
                                             <span class='button-82-shadow'></span>
                                             <span class='button-82-edge'></span>
@@ -165,11 +195,6 @@
                 ?>
             </div>
         </div>
-
-        <script>
-            function Hide() {
-                document.getElementById("Payment").style.display = "block";
-            }
-        </script>
+        <script src="Grup.js"></script>
     </body>
 </html>
