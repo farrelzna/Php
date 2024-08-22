@@ -66,7 +66,7 @@ foreach ($_SESSION['pembelajaan'] as $belan => $b) {    //untuk menampilkan/meng
                 <p>Rp. <?= number_format($total_belanja, 2, ',', '.') ?></p>
                 <p>Uang Yang Dibayar</p>
                 <div class="bayar">
-                    <p> Rp. <?= number_format($_SESSION['bayar'] , 0, ',', '.')?></p>
+                    <p> Rp. <?= number_format($_SESSION['bayar'], 0, ',', '.') ?></p>
                 </div>
                 <p>Kembalian</p>
                 <p> Rp. <?= $bayar ?></p>

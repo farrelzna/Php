@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="switch">
         <label class="theme-switch" for="checkbox">
@@ -31,42 +33,43 @@
     </form>
 
     <?php
-        require "Logic.php";
+    require "Logic.php";
 
-        $logic = new Pembelian();
-        $logic->setHarga(10000,15000,20000, 25000);
+    $logic = new Pembelian();
+    $logic->setHarga(10000, 15000, 20000, 25000);
 
-        if(isset($_POST['beli'])){
-            $logic->JenisYangDipilih = $_POST['jenis'];
-            $logic->TotalPerLiter = $_POST['liter'];
-            $logic->totalharga();
-            $logic->cetakbukti();
-        }
+    if (isset($_POST['beli'])) {
+        $logic->JenisYangDipilih = $_POST['jenis'];
+        $logic->TotalPerLiter = $_POST['liter'];
+        $logic->totalharga();
+        $logic->cetakbukti();
+    }
     ?>
 
-<script>
-            const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-            const currentTheme = localStorage.getItem('theme');
+    <script>
+        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+        const currentTheme = localStorage.getItem('theme');
 
-            if (currentTheme) {
-                document.documentElement.setAttribute('data-theme', currentTheme);
-            
-                if (currentTheme === 'dark') {
-                    toggleSwitch.checked = true;
-                }
+        if (currentTheme) {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+
+            if (currentTheme === 'dark') {
+                toggleSwitch.checked = true;
             }
+        }
 
-            function switchTheme(e) {
-                if (e.target.checked) {
-                    document.documentElement.setAttribute('data-theme', 'dark');
-                    localStorage.setItem('theme', 'dark');
-                }
-                else {        document.documentElement.setAttribute('data-theme', 'light');
-                    localStorage.setItem('theme', 'light');
-                }    
+        function switchTheme(e) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
             }
+        }
 
-            toggleSwitch.addEventListener('change', switchTheme, false);
-        </script>
+        toggleSwitch.addEventListener('change', switchTheme, false);
+    </script>
 </body>
+
 </html>

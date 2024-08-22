@@ -60,13 +60,13 @@ require("logic/logic.php"); //memanggil file logic
                     ?>
                         <tr>
                             <th scope="row"><?= $i ?></th>
-                            <th><?= htmlspecialchars($b['barang']) ?></th> 
+                            <th><?= htmlspecialchars($b['barang']) ?></th>
                             <!-- untuk menampilkan array barang - htmlspecialchars > pengubahan tag -->
-                            <th><?= "Rp." . number_format($b['harga'], 0, ',', '.') ?></th> 
+                            <th><?= "Rp." . number_format($b['harga'], 0, ',', '.') ?></th>
                             <!-- untuk menampilkan array harga - number_format> format angka -->
                             <th><?= htmlspecialchars($b['jumlah']) ?></th>
                             <!-- untuk menampilkan array jumlah - htmlspecialchars > pengubahan tag -->
-                            <th><?= number_format($b['harga'] * $b['jumlah'], 0, ',', '.') ?></th> 
+                            <th><?= number_format($b['harga'] * $b['jumlah'], 0, ',', '.') ?></th>
                             <!-- untuk menampilkan array total -->
                             <th cellpadding="5">
                                 <form method="post" style="display:inline;">
@@ -75,14 +75,15 @@ require("logic/logic.php"); //memanggil file logic
                                 </form>
                             </th>
                         </tr>
-                    <?php $i++;endforeach; ?>
+                    <?php $i++;
+                    endforeach; ?>
                     <!-- pemberhentian -->
                     <tr>
                         <td colspan="5"> Total Barang</td>
                         <td><?= count($_SESSION['pembelajaan']) ?></td>
                         <!-- menghitung > menampilkan output -->
                     </tr>
-                    <tr>    
+                    <tr>
                         <td colspan="5">Total Belanja</td>
                         <!-- menampilkan output -->
                         <td><?= "Rp." . number_format($total_belanja, 0, ',', '.') ?></td>

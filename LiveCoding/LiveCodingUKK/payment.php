@@ -48,7 +48,7 @@ if (isset($_POST['cash'])) {    // Jika tombol bayar diklik
             </div>
             <br>
             <h5>Uang yang harus Anda bayarkan adalah :<br><br><?= "Rp." . number_format($total_belanja, 0, ',', '.'); ?></h5>
-                <br>
+            <br>
             <button type="submit" value="Sign in" class="btn btn-primary" name="cash">Bayar</button>
             <br><br>
             <a href="index.php">Halaman awal</a>

@@ -1,6 +1,7 @@
 <?php
 
-class DataBahanBakar {
+class DataBahanBakar
+{
     private $hargaSSuper;
     private $hargaSVPower;
     private $hargaSVPowerDiesel;
@@ -11,14 +12,16 @@ class DataBahanBakar {
 
     protected $TotalPembayaran;
 
-    public function setHarga($valSSuper, $valSVPower, $valSVPowerDiesel, $valSVPowerNitro) {
+    public function setHarga($valSSuper, $valSVPower, $valSVPowerDiesel, $valSVPowerNitro)
+    {
         $this->hargaSSuper = $valSSuper;
         $this->hargaSVPower = $valSVPower;
         $this->hargaSVPowerDiesel = $valSVPowerDiesel;
         $this->hargaSVPowerNitro = $valSVPowerNitro;
     }
 
-    public function getHarga() {
+    public function getHarga()
+    {
         $SemuaDataSolar["SSuper"] = $this->hargaSSuper;
         $SemuaDataSolar["SVPower"] = $this->hargaSVPower;
         $SemuaDataSolar["SVPowerDiesel"] = $this->hargaSVPowerDiesel;
@@ -28,18 +31,21 @@ class DataBahanBakar {
     }
 }
 
-class Pembelian extends DataBahanBakar {
+class Pembelian extends DataBahanBakar
+{
 
-    public function totalharga() {
+    public function totalharga()
+    {
         $this->TotalPembayaran = $this->getHarga()[$this->JenisYangDipilih] * $this->TotalPerLiter;
     }
 
-    public function cetakbukti() {
+    public function cetakbukti()
+    {
         echo "<tr>";
         echo "Jenis bahan bakar :" . $this->JenisYangDipilih;
-        echo "<br>"; 
+        echo "<br>";
         echo "Jumlah per liter :" . $this->TotalPerLiter;
         echo "<br>";
-        echo "Total pembayaran :" . $this->TotalPembayaran;   
+        echo "Total pembayaran :" . $this->TotalPembayaran;
     }
 }
