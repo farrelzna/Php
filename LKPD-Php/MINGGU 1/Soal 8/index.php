@@ -9,26 +9,38 @@
 
 <body>
     <?php
+    // $data = [80, 90, 75, 100, 85, 100, 66];
+    // $cari = 100;
+
+    // // Menghitung jumlah item duplikat 
+    // $frekuensi = array_count_values(array_merge($data));
+
+    // // Pisahkan nilai yang duplikat dan unik
+    // $duplikat = [];
+
+    // foreach ($frekuensi as $nilai => $jumlah) {
+    //     if ($jumlah > 1) {
+    //         $duplikat[$nilai] = $jumlah;
+    //     }
+    // }
+
+    // // Tampilkan hasil
+    // echo "Nilai-nilai yang sama:<br>";
+    // foreach ($duplikat as $nilai => $jumlah) {
+    //     echo "Nilai: $nilai, Jumlah: $jumlah<br>";
+    // }
+
     $data = [80, 90, 75, 100, 85, 100, 66];
-    $cari = 100;
+    $cari = 20;
 
-    // Menghitung jumlah item duplikat 
-    $frekuensi = array_count_values(array_merge($data));
-
-    // Pisahkan nilai yang duplikat dan unik
-    $duplikat = [];
-
-    foreach ($frekuensi as $nilai => $jumlah) {
-        if ($jumlah > 1) {
-            $duplikat[$nilai] = $jumlah;
-        }
+    function cari_angka($data, $cari)
+    {
+        $jumlah = array_count_values($data)[$cari] ?? 0;
+        echo "Jumlah Angka $cari = $jumlah";
     }
 
-    // Tampilkan hasil
-    echo "Nilai-nilai yang sama:<br>";
-    foreach ($duplikat as $nilai => $jumlah) {
-        echo "Nilai: $nilai, Jumlah: $jumlah<br>";
-    }
+    cari_angka($data, $cari);
+
     ?>
 </body>
 

@@ -17,7 +17,7 @@
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $jumlah = floatval($_POST['jumlah']);
-        $pecahan = [100000, 50000, 20000, 10000, 5000, 1000, 500, 100];
+        $pecahan = [100000, 50000, 20000, 10000, 5000, 3000, 1000, 500, 100];
 
         echo "Jumlah uang: Rp " . number_format($jumlah, 2, ',', '.') . "<br>";
 

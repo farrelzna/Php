@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {        //memeriksa apakah form dikir
     $angka = preg_replace('/\D/', '', $input);     //menghapus semua karakter yang bukan angka
 
     if ($angka) {
-        echo "<p>Teks mengandung angka: " . implode(" dan ", str_split($angka)) . "</p>";   //membagi string angka menjadi array karakter individu
+        echo "<p>Teks mengandung angka: " . implode(", ", str_split($angka)) . "</p>";   //membagi string angka menjadi array karakter individu, argumen satu untuk menentukan value, 
     } else {
         echo "<p>Teks tidak mengandung angka</p>";
     }

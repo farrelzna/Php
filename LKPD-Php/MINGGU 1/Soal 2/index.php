@@ -18,12 +18,12 @@
 
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $jamKerja = intval($_POST['lamakerja']);
+        $jamKerja = intval($_POST['lamakerja']);                //mengembalikan nilai integer suatu variabel.
 
         $kompensasi = 0;
 
         if ($jamKerja > 8) {
-            $kompensasi = 50000 + ($jamKerja - 9) * 25000;
+            $kompensasi = 50000 + ($jamKerja - 9) * 25000;      //kompensasi dasar, setiap lewat jam 9 
         }
 
         $jamlebih = $jamKerja - 8;
