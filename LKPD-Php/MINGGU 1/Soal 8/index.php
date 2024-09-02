@@ -26,21 +26,23 @@
 
     // // Tampilkan hasil
     // echo "Nilai-nilai yang sama:<br>";
-    // foreach ($duplikat as $nilai => $jumlah) {
+// foreach ($duplikat as $nilai => $jumlah) {
     //     echo "Nilai: $nilai, Jumlah: $jumlah<br>";
     // }
 
+    
     $data = [80, 90, 75, 100, 85, 100, 66];
-    $cari = 20;
-
+    $cari = 100;
+    
+    
     function cari_angka($data, $cari)
     {
         $jumlah = array_count_values($data)[$cari] ?? 0;
         echo "Jumlah Angka $cari = $jumlah";
     }
-
+    
     cari_angka($data, $cari);
-
+    
     ?>
 </body>
 
