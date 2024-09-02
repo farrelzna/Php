@@ -37,11 +37,11 @@
     
     function cari_angka($data, $cari)
     {
-        $jumlah = array_count_values($data)[$cari] ?? 0;
+        $jumlah = array_count_values($data)[$cari] ?? 0;    //mengakses //null coalescing memastikan jika $cari tidak ada di dalam array dan $jumlah akan di set ke 0
         echo "Jumlah Angka $cari = $jumlah";
     }
     
-    cari_angka($data, $cari);
+    cari_angka($data, $cari);   //Ini akan menghitung frekuensi kemunculan 100 dalam array $data dan menampilkan hasilnya.
     
     ?>
 </body>

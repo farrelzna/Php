@@ -48,14 +48,14 @@
 
         <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $jumlah = floatval($_POST['jumlah']);
+            $jumlah = floatval($_POST['jumlah']);   //mengubah data menjadi tipe data float
             $pecahan = [100000, 50000, 20000, 10000, 5000, 3000, 1000, 500, 100, 50, 30, 10];
 
-            echo "Jumlah uang: Rp " . number_format($jumlah, 2, ',', '.') . "<br>";
+            echo "Jumlah uang: Rp " . number_format($jumlah, 2, ',', '.') . "<br>"; //format angka
 
             foreach ($pecahan as $nilai) {
                 if ($jumlah >= $nilai) {
-                    $jumlahPecahan = intval($jumlah / $nilai);
+                    $jumlahPecahan = intval($jumlah / $nilai);  //memastikan hasilnya adalah integer
                     $jumlah -= $jumlahPecahan * $nilai;
                     echo "Rp " . number_format($nilai, 0, ',', '.') . " = " . $jumlahPecahan . "<br>";
                 }

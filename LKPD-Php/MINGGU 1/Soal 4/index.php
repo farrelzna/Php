@@ -9,7 +9,7 @@
 
 <body>
     <?php
-    for ($i = 2; $i >= 1; $i--) {
+    for ($i = 1 ; $i <= 2; $i++) {
         for ($j = 10; $j >= 1; $j--) { 
             $hasil = $i * $j;
 

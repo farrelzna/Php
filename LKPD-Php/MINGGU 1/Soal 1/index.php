@@ -13,7 +13,7 @@
         margin: auto;
         margin-top: 20vh;
         display: flex;
-        justify-content: center;
+        justify-content: center ;
     }
 
     .container {
@@ -47,14 +47,13 @@
         </form>
         <?php
 
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {        //memeriksa apakah form dikirimkan menggunakan metode POST. Jika ya, maka blok kode di dalamnya akan dieksekusi.
-
-            $input = $_POST['input'];                      //membuat, mengambil, menyimpan nilai dari inputan form
-            $angka = preg_replace('/\D/', '', $input);     //menghapus semua karakter yang bukan angka
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {         //memeriksa http
+            $input = $_POST['input'];                      
+            $angka = preg_replace('/\D/', '', $input); //mencari angka
 
             if ($angka) {
                 echo "<p>Teks mengandung angka: " . implode(", ", str_split($angka)) . "</p>";   //membagi string angka menjadi array karakter individu, argumen satu untuk menentukan value, 
-            } else {
+            } else {                                                                             //mengubah array menjadi string
                 echo "<p>Teks tidak mengandung angka</p>";
             }
         }

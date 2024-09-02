@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <?php
+    <?php   
     for ($i = 1; $i <= 11; $i += 2) {
         $hasil = 5 * $i;
         echo "<p>Nilai dari $i x 5 = $hasil</p><br>";
