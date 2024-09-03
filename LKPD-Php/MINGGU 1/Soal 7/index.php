@@ -35,6 +35,7 @@
     button {
         border-radius: 5px;
         display: flex;
+        padding: 5px;
 
     }
 
@@ -62,7 +63,7 @@
             $kalimat2 = isset($_POST['kalimat2']) ? $_POST['kalimat2'] : '';
 
             // Menghitung jumlah karakter
-            $selisih = strlen($kalimat1) - strlen($kalimat2);
+            $selisih = abs(strlen($kalimat1) - strlen($kalimat2));
 
             // Menampilkan hasil
             echo "Jumlah karakter kalimat pertama:" . strlen($kalimat1) . "<br>";

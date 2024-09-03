@@ -7,6 +7,12 @@
     <title>Document</title>
 </head>
 
+<style>
+    .color {
+        color: brown;
+    }
+</style>
+
 <body>
     <?php
     // $bil1 = [80, 77, 65, 89, 55, 12, 90, 86];
